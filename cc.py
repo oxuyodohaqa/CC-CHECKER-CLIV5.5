@@ -110,10 +110,13 @@ class CreditCardChecker:
             'auth': 'username:password',
             'type': 'http'
         }
-        
+        self.config['TELEGRAM'] = {
+            'token': 'your_telegram_bot_token_here'
+        }
+
         with open(self.settings_file, 'w') as configfile:
             self.config.write(configfile)
-        
+
         print(f"{res}[{yl}!{res}]{fb} Created default {self.settings_file}. Please configure it before running the checker {res}[{yl}!{res}]{fb}")
         sys.exit(0)
     

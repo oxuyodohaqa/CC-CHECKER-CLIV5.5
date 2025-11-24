@@ -41,7 +41,23 @@ To run this tool you need to clone or download this tool.
 - Goto folder CC-CHECKER-CLIV5.5
 - open cmd and type python cc.py
 - enjoy
-``` 
+```
+
+## Telegram Bot
+
+You can also run the checker through a Telegram bot.
+
+1. Install dependencies: `pip install python-telegram-bot requests colorama termcolor`.
+2. Configure your API, proxy, and Telegram bot token inside `settings.ini` (or set `BOT_TOKEN` as an environment variable).
+3. Start the bot with:
+   ```bash
+   python telegram_bot.py
+   ```
+4. In Telegram:
+   - Send `/cards` followed by your card list (or upload a file containing the lines).
+   - Send `/proxies` followed by your proxy list (or upload a proxy file).
+   - Run `/check <gateway> <threads>` (gateway options: vbv, stripe, paypal, braintree, square, stripe_charger; threads between 3-10).
+5. Results are summarized in chat and saved to the `result/` folder.
 
 ## Output
 
